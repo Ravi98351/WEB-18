@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup_login</title>
+    <style>
+body{
+    
+    font-size:15px;
+    background-color: rgb(241, 238, 245);
+}
+input{
+   width:90%;
+   padding: 15px;
+   border-radius:10px;
+
+}
+#btn{
+    border-radius: 20px;
+    margin-top: 20px;
+    width:40%;
+
+
+}
+#container{
+    height:30%;
+    width:40%;
+    border:1px solid black;
+    text-align: center;
+    margin: auto;
+    }
+    #masai{
+        text-align: center;
+       margin-top: 30px;
+       font-size: xxx-large;
+       margin-bottom: 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="masai">Masai</div>
+    <form>
+        <div id="container">
+    <h1>Email</h1>
+    <input id="email" type="email" placeholder="Enter Email"/>
+<h1>Phone</h1>
+    <input id="phone" type="number" placeholder="Phone number"/>
+    <h1>Password</h1>
+    <input id="pass" type="text" placeholder="Password"/>
+    <br>
+    <input id="btn" type="submit" value="sign up"/>
+</form>
+</div>
+</body>
+</html>
+<script>
+   
+document.querySelector("form").addEventListener("submit", masai);
+var data=[];
+
+function masai(){
+    event.preventDefault();
+
+    var information={
+
+    email: document.querySelector("#email").value,
+    // ---also we can write -----
+    // email:container.email.value
+    // same as for all
+    phone: document.querySelector("#phone").value,
+    pass: document.querySelector("#pass").value,
+};
+
+
+data.push(information);
+
+localStorage.setItem("document",JSON.stringify(data));
+
+}
+
+</script>

@@ -4,20 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>backend</title>
     <link rel="stylesheet" href="../accessing keys/common.css" />
-    <!-- <style>
+    <style>
       #navbar {
         margin-bottom: 50px;
-        background-color: aqua;
+        background-color: rgb(170, 219, 56);
+        font-size: 30px;
+        display:flex;
+       justify-content: space-around;
       }
-    </style> -->
+    </style>
   </head>
   <body>
-    <div id="navbar">
+    <!-- <div id="navbar">
       <div><a href="backend.html">Backend</a></div>
       <div> <a href="frontend.html">Frontend</a></div> </div>
-    </div>
+    </div> -->
+    <h1>Backend</h1>
     <form id="investorForm">
       <input id="imgURL" type="text" placeholder="Enter Image URL" />
       <input id="name" type="text" placeholder="Enter investor name" />
@@ -33,7 +37,7 @@
 </html>
 
 <script>
-  //imgurl,name,role,companyLogo
+  
   document
     .querySelector("#investorForm")
     .addEventListener("submit", investorsFun);
@@ -41,17 +45,11 @@
 
   var investorArr = JSON.parse(localStorage.getItem("investorsData"))||[]
 
-  // if(JSON.parse(localStorage.getItem("investorsData"))==null){
-  //   investorArr =[]
-  // }
-  // else{
-  //   investorArr=JSON.parse(localStorage.getItem("investorsData"))
-  // }
-  //     Array of objects
+ 
   function investorsFun() {
     event.preventDefault();
 
-    // idOfForm.idOfinput.value
+    
     var investorObj = {
       investorImg: investorForm.imgURL.value,
       investorName: investorForm.name.value,
